@@ -1,0 +1,22 @@
+{{ $version := .Site.Params.build.version | default "0.1.0" }}
+{{ $channel := .Site.Params.build.channel | default "ohanabuilds" }}
+{{ $git := "unknown" }}
+{{ with .GitInfo }}{{ $git = .AbbreviatedHash }}{{ end }}
+{{ $builtAt := now.UTC.Format "2006-01-02T15:04:05Z07:00" }}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="Ohana Builds creates calm, trustworthy websites for nonprofits and community groups." />
+<meta name="app:name" content="{{ .Site.Title }}" />
+<meta name="app:version" content="{{ $version }}" />
+<meta name="app:channel" content="{{ $channel }}" />
+<meta name="build:git" content="{{ $git }}" />
+<meta name="build:date" content="{{ $builtAt }}" />
+<link rel="stylesheet" href="{{ "css/base.css" | relURL }}" />
+<script>
+window.APP_BUILD = {
+  version: {{ $version | jsonify }},
+  git: {{ $git | jsonify }},
+  builtAt: {{ $builtAt | jsonify }}
+};
+</script>

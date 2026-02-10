@@ -1,0 +1,10 @@
+baseURL = "https://ohanabuilds.org/"
+languageCode = "en-us"
+title = "Ohana Builds"
+enableGitInfo = true
+
+disableKinds = ["taxonomy", "term"]
+
+[params.build]
+version = "0.1.0"
+channel = "ohanabuilds"
