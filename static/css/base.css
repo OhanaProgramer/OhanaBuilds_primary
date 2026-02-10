@@ -260,7 +260,8 @@ a {
 
 .section-header .section-intro {
   color: var(--muted);
-  max-width: 68ch;
+  max-width: 52ch;
+  line-height: 1.45;
   margin-bottom: 0;
 }
 
@@ -300,6 +301,10 @@ a {
 
 .check-list li + li {
   margin-top: 0.45rem;
+}
+
+.card ul {
+  max-width: 40ch;
 }
 
 /* === Process / Steps Component === */

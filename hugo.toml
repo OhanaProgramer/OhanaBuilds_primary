@@ -8,3 +8,4 @@ disableKinds = ["taxonomy", "term"]
 [params.build]
 version = "0.1.0"
 channel = "ohanabuilds"
+git = "b9972c9"

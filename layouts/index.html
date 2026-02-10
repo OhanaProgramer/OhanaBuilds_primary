@@ -27,8 +27,7 @@
           <p class="eyebrow">Websites for local impact</p>
           <h1 id="hero-title">Simple, trustworthy nonprofit websites built with care.</h1>
           <p class="hero-lead">
-            Ohana Builds helps community organizations launch clear, mobile-friendly websites
-            that explain services, build trust, and make it easy for people to take next steps.
+            Ohana Builds helps community organizations launch clear, mobile-friendly websites that explain services, build trust, and make it easy for people to take next steps.
           </p>
           <div class="hero-actions">
             <a class="cta-button cta-button--secondary" href="#get-in-touch">Get in Touch</a>
@@ -55,7 +54,7 @@
       <div class="container section-shell">
         <div class="section-header">
           <h2 id="mission-title">Mission and Value</h2>
-          <p class="section-intro">Who we are, how we help, and why this format works for small community organizations.</p>
+          <p class="section-intro">Who we are, how we help, and why this format works for small, resource-constrained organizations.</p>
         </div>
         <div class="section-grid">
           <article class="card mission-card">
@@ -72,9 +71,10 @@
           <article class="card value-list-card">
             <h3>Who benefits</h3>
             <ul class="check-list">
-              <li>Small nonprofits with limited web capacity</li>
+              <li>Nonprofits and grassroots groups with limited funding or staff</li>
+              <li>New or early-stage organizations that need a clear, credible web presence</li>
               <li>Community programs that need service information easy to find</li>
-              <li>Teams that need calm, credible design without complexity</li>
+              <li>Teams that value calm, trustworthy design without ongoing technical overhead</li>
             </ul>
           </article>
         </div>
@@ -111,12 +111,10 @@
         </div>
         <article class="card support-card">
           <p>
-            Ohana Builds is sustained through a mix of small project fees, general support, and occasional donations.
-            We keep costs low for community organizations, and when funding is a barrier we can sometimes cover domain or hosting.
-            If you’d like to support this work, ask and we’ll share options—no pressure.
+            Ohana Builds is sustained through a mix of small project fees, general support, and occasional donations. We keep costs low for community organizations, and when funding is a barrier we can sometimes help cover essentials like a domain name or basic hosting.
           </p>
           <p class="support-note">
-            There are no hidden costs. We’ll confirm any costs (domain/hosting) before we set anything live.
+            The only direct, unavoidable cost for most sites is the domain name. Beyond that, support is flexible and voluntary—often as little as the equivalent of $1 per month, or whatever your organization feels is reasonable in your country or context. There are no hidden costs. Any expenses (such as domain or hosting) are discussed and agreed on before anything goes live.
           </p>
         </article>
       </div>
@@ -144,8 +142,7 @@
 
   <footer class="site-footer">
     {{ $version := .Site.Params.build.version | default "0.1.0" }}
-    {{ $git := "unknown" }}
-    {{ with .GitInfo }}{{ $git = .AbbreviatedHash }}{{ end }}
+    {{ $git := .Site.Params.build.git | default "unknown" }}
     <div class="container">
       <p>OhanaBuilds · Build {{ $version }} · {{ $git }}</p>
     </div>
