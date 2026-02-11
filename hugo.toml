@@ -14,3 +14,6 @@ disableKinds = ["taxonomy", "term"]
 version = "0.1.0"
 channel = "ohanabuilds"
 git = "b9972c9"
+
+[params]
+  googleAnalyticsID = "G-M3BZS05RFX"

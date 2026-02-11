@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
   {{ partial "head.html" . }}
+
+{{ if .Site.Params.googleAnalyticsID }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalyticsID }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAnalyticsID }}');
+</script>
+{{ end }}
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
