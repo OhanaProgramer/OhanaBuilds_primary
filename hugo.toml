@@ -5,6 +5,11 @@ enableGitInfo = true
 
 disableKinds = ["taxonomy", "term"]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params.build]
 version = "0.1.0"
 channel = "ohanabuilds"
