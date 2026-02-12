@@ -1,4 +1,4 @@
-baseURL = "https://ohanabuilds.org/"
+baseURL = "https://www.ohanabuilds.org/"
 languageCode = "en-us"
 title = "Ohana Builds"
 enableGitInfo = true
@@ -17,3 +17,10 @@ git = "b9972c9"
 
 [params]
   googleAnalyticsID = "G-BCMP0SN4D7"
+
+enableRobotsTXT = true
+
+[sitemap]
+  filename = "sitemap.xml"
+  changefreq = "weekly"
+  priority = 0.5
