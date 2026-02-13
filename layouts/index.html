@@ -49,19 +49,11 @@
             <a class="cta-button cta-button--secondary" href="mailto:contact@ohanabuilds.org?subject=Inquiry from OhanaBuilds.org">Get in Touch</a>
           </div>
         </div>
-        <figure class="hero-visual" aria-label="Community support illustration">
-          <svg viewBox="0 0 400 260" role="img" aria-labelledby="hero-art-title hero-art-desc" focusable="false">
-            <title id="hero-art-title">Community service illustration</title>
-            <desc id="hero-art-desc">Hands and people symbols representing local nonprofit support and partnership.</desc>
-            <rect x="10" y="10" width="380" height="240" rx="20" fill="#f2f7f4" />
-            <circle cx="110" cy="95" r="26" fill="#adcdbf" />
-            <circle cx="200" cy="75" r="22" fill="#8cb5a3" />
-            <circle cx="285" cy="100" r="24" fill="#c7ddd4" />
-            <path d="M70 180c26-24 60-24 84 0" fill="none" stroke="#376050" stroke-width="8" stroke-linecap="round" />
-            <path d="M158 180c26-24 60-24 84 0" fill="none" stroke="#376050" stroke-width="8" stroke-linecap="round" />
-            <path d="M246 180c22-22 50-22 74 0" fill="none" stroke="#376050" stroke-width="8" stroke-linecap="round" />
-            <path d="M184 128h32l18 30h-68z" fill="#5f8b78" />
-          </svg>
+        <figure class="hero-visual">
+          <picture>
+            <source srcset="{{ "img/hero.webp" | relURL }}" type="image/webp">
+            <img src="{{ "img/hero.png" | relURL }}" alt="OhanaBuilds" width="1024" height="1024" loading="eager" decoding="async">
+          </picture>
         </figure>
       </div>
     </section>
@@ -128,36 +120,45 @@
           <p>These are fully functional demonstration sites built using our templates.</p>
         </div>
 
-        <div class="section-grid">
+        <div class="section-grid site-types-grid">
 
-          <article class="card">
-            <h3>Food Pantry</h3>
-            <p>A clear, accessible site designed for community food distribution programs.</p>
-            <p>
-              <a class="btn-demo" href="https://pantry.ohanabuilds.org" target="_blank" rel="noopener">
-                Demo
-              </a>
-            </p>
+          <article class="card site-type-card">
+            <div class="site-type-card__content">
+              <h3>Food Pantry</h3>
+              <p>A clear, accessible site designed for community food distribution programs.</p>
+              <p>
+                <a class="btn-demo" href="https://pantry.ohanabuilds.org" target="_blank" rel="noopener">
+                  Demo
+                </a>
+              </p>
+            </div>
+            <img class="card__icon" src="{{ "img/food.png" | relURL }}" alt="" width="225" height="225" loading="lazy" decoding="async">
           </article>
 
-          <article class="card">
-            <h3>Animal Shelter</h3>
-            <p>A calm, adoption-focused layout for shelters and foster networks.</p>
-            <p>
-              <a class="btn-demo" href="https://shelter.ohanabuilds.org" target="_blank" rel="noopener">
-                Demo
-              </a>
-            </p>
+          <article class="card site-type-card">
+            <div class="site-type-card__content">
+              <h3>Animal Shelter</h3>
+              <p>A calm, adoption-focused layout for shelters and foster networks.</p>
+              <p>
+                <a class="btn-demo" href="https://shelter.ohanabuilds.org" target="_blank" rel="noopener">
+                  Demo
+                </a>
+              </p>
+            </div>
+            <img class="card__icon" src="{{ "img/pets.png" | relURL }}" alt="" width="225" height="225" loading="lazy" decoding="async">
           </article>
 
-          <article class="card">
-            <h3>Community Clinic</h3>
-            <p>A structured, trust-oriented layout for local health access programs.</p>
-            <p>
-              <a class="btn-demo" href="https://clinic.ohanabuilds.org" target="_blank" rel="noopener">
-                Demo
-              </a>
-            </p>
+          <article class="card site-type-card">
+            <div class="site-type-card__content">
+              <h3>Community Clinic</h3>
+              <p>A structured, trust-oriented layout for local health access programs.</p>
+              <p>
+                <a class="btn-demo" href="https://clinic.ohanabuilds.org" target="_blank" rel="noopener">
+                  Demo
+                </a>
+              </p>
+            </div>
+            <img class="card__icon" src="{{ "img/doctor.png" | relURL }}" alt="" width="225" height="225" loading="lazy" decoding="async">
           </article>
 
         </div>
