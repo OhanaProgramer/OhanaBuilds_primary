@@ -41,6 +41,7 @@
         <div>
           <p class="eyebrow">Websites for local impact</p>
           <h1 id="hero-title">Simple, trustworthy nonprofit websites built with care.</h1>
+          <p class="hero-subline">Websites for small nonprofits — simple, fast, and affordable.</p>
           <p class="hero-lead">
             Ohana Builds helps community organizations launch clear, mobile-friendly websites that explain services, build trust, and make it easy for people to take next steps.
           </p>
@@ -205,10 +206,8 @@
   </main>
 
   <footer class="site-footer">
-    {{ $version := .Site.Params.build.version | default "0.1.0" }}
-    {{ $git := .Site.Params.build.git | default "unknown" }}
     <div class="container">
-      <p>OhanaBuilds · Build {{ $version }} · {{ $git }}</p>
+      <p>OhanaBuilds · v1.0</p>
     </div>
   </footer>
 </body>

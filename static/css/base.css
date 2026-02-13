@@ -170,6 +170,12 @@ a {
   max-width: 58ch;
 }
 
+.hero-subline {
+  margin: 0 0 0.55rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .hero-actions {
   margin-top: 1.25rem;
   display: flex;
