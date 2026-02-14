@@ -47,7 +47,12 @@
             When capacity is reached, additional organizations are placed on a waitlist.
           </p>
           <div class="hero-actions">
-            <a class="cta-button cta-button--secondary" href="mailto:contact@ohanabuilds.org?subject=Inquiry from OhanaBuilds.org">Get in Touch</a>
+            <a
+              class="cta-button cta-button--secondary js-email-link"
+              href="#"
+              data-enc="b2hhbmFjb2Rlc0BnbWFpbC5jb20="
+              data-subject="Inquiry from OhanaBuilds.org"
+            >Get in Touch</a>
           </div>
         </div>
         <figure class="hero-visual">
@@ -200,9 +205,13 @@
         <article class="card contact-card">
           <p>
             <strong>Email:</strong>
-            <a class="text-link" href="mailto:contact@ohanabuilds.org?subject=Inquiry from OhanaBuilds.org">
-              contact@ohanabuilds.org
-            </a>
+            <a
+              class="text-link js-email-link"
+              href="#"
+              data-enc="b2hhbmFjb2Rlc0BnbWFpbC5jb20="
+              data-subject="Inquiry from OhanaBuilds.org"
+              aria-label="Email OhanaBuilds"
+            >Email us</a>
           </p>
           <p><strong>First step:</strong> Tell us your priority page (services, programs, or contact).</p>
           <p><strong>Capacity:</strong> New organizations are accepted only when hosting slots are available.</p>
@@ -216,5 +225,33 @@
       <p>OhanaBuilds · v1.0</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      function decodeEmail(enc) {
+        try { return atob(enc); } catch (e) { return ""; }
+      }
+
+      function buildMailto(email, subject) {
+        if (!email) return "#";
+        var s = subject ? encodeURIComponent(subject) : "";
+        return "mailto:" + email + (s ? "?subject=" + s : "");
+      }
+
+      document.addEventListener("click", function (e) {
+        var el = e.target && e.target.closest ? e.target.closest(".js-email-link") : null;
+        if (!el) return;
+        e.preventDefault();
+
+        var enc = el.getAttribute("data-enc") || "";
+        var subject = el.getAttribute("data-subject") || "";
+        var email = decodeEmail(enc);
+        var href = buildMailto(email, subject);
+
+        // Navigate only at click-time so the raw email isn't present in the HTML source.
+        window.location.href = href;
+      });
+    })();
+  </script>
 </body>
 </html>
