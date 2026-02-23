@@ -18,5 +18,31 @@
   <main id="main">
     {{ .Content }}
   </main>
+  <script>
+    (function () {
+      function decodeEmail(enc) {
+        try { return atob(enc); } catch (e) { return ""; }
+      }
+
+      function buildMailto(email, subject) {
+        if (!email) return "#";
+        var s = subject ? encodeURIComponent(subject) : "";
+        return "mailto:" + email + (s ? "?subject=" + s : "");
+      }
+
+      document.addEventListener("click", function (e) {
+        var el = e.target && e.target.closest ? e.target.closest(".js-email-link") : null;
+        if (!el) return;
+        e.preventDefault();
+
+        var enc = el.getAttribute("data-enc") || "";
+        var subject = el.getAttribute("data-subject") || "";
+        var email = decodeEmail(enc);
+        var href = buildMailto(email, subject);
+
+        window.location.href = href;
+      });
+    })();
+  </script>
 </body>
 </html>
