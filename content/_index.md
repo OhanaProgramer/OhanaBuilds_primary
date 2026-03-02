@@ -2,7 +2,8 @@
 title: "Ohana Builds"
 ---
 
-Calm, durable websites for nonprofits and community groups.
+Completely free websites for nonprofits and community groups.
 
-We build simple, repeatable sites so organizations can focus on their mission,
-not technology.
+No cost. No hidden fees. Ever.
+
+OhanaBuilds is a volunteer-run, donation-funded initiative.
